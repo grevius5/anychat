@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AnyChat</title>
+
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <!-- Username module -->
+    <div id="modal_username" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="my-modal-title">Set your username</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="" placeholder="Username" aria-label="Username"
+                            aria-describedby="username" id="username">
+                        <div class="input-group-append">
+                            <span class="input-group-text">Username</span>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-right">
+                        <button type="button" class="btn btn-success" id="modal_save">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="shadow">
+            <div class="sidebar-header">
+                <h3 class="text-primary">
+                    <img src="img/logo.png" alt="">
+                    <span>AnyChat</span>
+                </h3>
+            </div>
+
+            <div class="input-group px-2 pb-2">
+                <input type="text" class="form-control" placeholder="Enter room" aria-label="Enter Room"
+                    id="custom_room">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="enter_room">Enter</button>
+                </div>
+            </div>
+
+            <ul class="list-unstyled components" id="room_list"></ul>
+        </nav>
+
+        <!-- Chat area -->
+        <div id="content">
+            <div class="chat-area">
+                <aside>
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" id="sidebarCollapse">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="navbar-header text-center">
+                                <h3 class="w-100">
+                                    Room name
+                                </h3>
+                                <small class="users">0 users</small>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div id="chat_box"></div>
+                    <div id="chat_status"></div>
+                    <div id="message_box">
+                        <input class="form-control" type="text" id="message" placeholder="message">
+                        <button class="btn btn-success" type="button" id="send_message">Send</button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

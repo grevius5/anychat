@@ -1,0 +1,42 @@
+{
+  "name": "anychat",
+  "version": "1.0.0",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "watch": "concurrently --kill-others 'node-sass --precision 6 src/sass/app.scss css/app.css --watch' 'webpack -w'",
+    "compile-sass": "node-sass --output-style expanded --precision 6 src/sass/app.scss public/css/app.css",
+    "css-minify": "cleancss --level 1 --format breaksWith=lf --output public/css/app.min.css public/css/app.css",
+    "webpack": "webpack",
+    "prepare": "npm run compile-sass && npm run css-minify && npm run webpack",
+    "start": "node server.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "Node",
+    "socket.io",
+    "chat"
+  ],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "concurrently": "^5.0.2",
+    "copy-webpack-plugin": "^5.1.1",
+    "mocha": "^7.0.0",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "sinon": "^8.1.0",
+    "socket.io-client": "^2.3.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
