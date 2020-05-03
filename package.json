@@ -22,7 +22,7 @@
   "description": "",
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "express": "^4.17.1",
     "socket.io": "^2.3.0",
     "popper.js": "^1.16.0"
